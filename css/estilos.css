@@ -1,0 +1,858 @@
+/*Reset CSS*/
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    list-style-type: none;
+    text-decoration: none;
+    font-family: "jost", sans-serif;
+    font-weight: 400; 
+}
+/*Cierra Reset CSS*/
+
+/*html*/
+html{
+   font-size: 62.5%; 
+   scroll-behavior: smooth; 
+}
+
+.centrar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Para parte de Javascript sticky */
+.sticky{
+    position: fixed;
+    top: 0;
+    z-index: 100;
+}
+
+
+/*Seccion-1*/
+.seccion-1{
+   width: 100%;
+   height: 100vh;
+   background: linear-gradient(rgba(255,255,255,0.4), rgba(0,0,0, 1)), url("../img/programacion3.png");
+   background-size: cover;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+}
+
+.seccion-1-encabezado{
+    font-size: 5rem;
+    font-weight: 500;
+    color: white;
+    background-color: #f0c1f5;
+    padding: 0 3rem;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    border-bottom: 5rem;
+    text-shadow: 0.2rem 0.2rem 0.5rem #212121;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.6);
+    border-radius: 1.%;
+
+}
+
+/*Seccion-1 imagen*/
+.seccion-1 img.img-persona{
+    position: relative;/*para poner giff delante*/
+    width: 40rem;
+    height: 60rem;
+    border-radius: 30%;
+    object-fit: cover;
+    border: 0.8rem dashed #f0c1f5;
+    padding: 0.7rem;
+    background-color: rgba(117, 114, 114, 0.904);
+    opacity: 1;
+    box-shadow: 3rem 3rem 2rem rgba(0, 0, 0, 0.4);
+
+}
+
+.seccion-1 img.giff{
+    width: 20rem;
+    height: 20rem;
+    position: absolute;
+    bottom: 200px; /* Ajusta la distancia desde el borde inferior */
+    right: 700px;  /* Ajusta la distancia desde el borde derecho */
+    z-index: 1; /* Asegura que el GIF esté delante de la imagen */
+    
+}
+/*Cierra Seccion-1 imagen*/
+
+.nombre-persona{
+  
+  font-family: "Mrs Saint Delafield", serif;
+  font-weight: 400;
+  font-style: normal;
+
+  text-shadow:
+  0.2rem 0.2rem 0.5rem #212121, 
+  1px 2px 2px #212121;
+ 
+     
+  font-size: 7rem;
+  color: white;
+  padding: 0.5rem 3rem;
+  letter-spacing: 0.5rem;
+
+}
+
+.seccion-1-btn{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #212121;
+    text-shadow: 0.2rem 0.2rem 0.5rem #212121;
+    background-color: #f0c1f5;
+    border: 0.2rem solid #212121;
+    border-radius: 10% 50% 10% 50%;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    box-shadow: 1rem 1rem 1rem rgba(0, 0, 0, 0.6);
+    
+
+}
+/*Cierra Seccion-1*/
+
+/* Navegacion */
+
+.navbar{
+    width: 100%;
+    height: 4rem;
+    background-color: #f0c1f5;
+    box-shadow: 0.2rem 0.2rem 0.5rem #212121;
+}
+
+.navbar-link{
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: #212121;
+    margin: 0 3rem;
+    letter-spacing: 0.4rem;
+    text-transform: uppercase;
+    position: relative;
+    transition: color 0.2s;
+}
+
+/* Para la parte de activacion del menu al hacer scroll con javascript  */
+.cambiar.navbar-link{
+    color: white;
+}
+
+.navbar-link:hover{
+    color: white;
+}
+
+.navbar-link::before{
+    content:"";
+    width: 0; /*valor de animacion inicial*/
+    height: 0.2rem;
+    background-color: white;
+    position: absolute;
+    right: -15%;
+    bottom: -0.3rem;
+    transform: width 0.2s;   
+}
+
+/* Para la parte de activacion del menu al hacer scroll con javascript  */
+.cambiar.navbar-link::before{
+    width: 130%;
+}
+
+.navbar-link:hover::before{
+    width: 130%;  /*valor de animacion final*/
+}
+
+/*cierra Navegacion */
+
+/*Seccion 2 */
+
+.seccion-2{
+    width: 100%;
+    height: 100%;
+    padding: 15rem 0 10rem 0;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.seccion-2-encabezado{
+    font-size: 5rem;
+    color: #212121;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    margin-bottom: 15rem;
+    border-bottom: 0.3rem solid #212121;
+    text-shadow: 0.2rem 0.2rem 0.5rem #212121;
+}
+
+.envoltura-barra-progreso{
+    margin-bottom: 10rem;
+}
+
+.barra-progreso{
+    width: 60rem;
+    height: 3rem;
+    background-color: #ccc;
+    margin: 1.6rem 0;
+    border-radius: 0.3rem;
+    box-shadow: 0.2rem 0.2rem;
+    position: relative;
+}
+
+.texto-progreso{
+    position: absolute;
+    left: 1rem;
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 0.2rem 0.2rem 0.5rem #212121;
+
+}
+
+.texto-progreso span{
+    margin: 0 0.5rem;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.porcentaje-progreso{
+    /* width: 90%; */
+    width: 0;
+    height: 100%;
+    background-color: #f0c1f5;
+    border-radius: 0.3rem;
+    /*anadir transicion de llenado de barra*/
+    transition: width 0.5s 0.5s ease-in-out;
+}
+
+.servicios{
+    width: 100%;
+    height: 30vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.servicio{
+    text-align: center;
+}
+
+.servicio img {
+    width: 10rem;
+    height: 10rem;
+    margin-bottom: 2rem;
+    box-shadow: 0.4rem 0.4rem 0.5rem #212121;
+    border-radius: 50%;
+    object-fit: cover; /* Asegura que la imagen se ajuste al contenedor circular */
+    background: radial-gradient(circle at 50% 50%, #ffffff, #cccccc); /* Efecto de luz */
+}
+
+
+.servicio i{
+   font-size: 12rem;
+   color: #888;
+    margin-bottom: 2rem;
+    text-shadow: 1.2rem 1.2rem 0.6rem #212121;
+}
+
+.servicio h2{
+    font-size: 2rem;
+    color: white;
+    text-shadow: 0.2rem 0.2rem 0.5rem #212121;
+    background-color: #f0c1f5;
+    margin: 0 1.6rem ;
+    width: 20rem;
+    letter-spacing: 0.3rem;
+    transform: rotateX('angle');
+    box-shadow: 0.2rem 0.2rem 0.5rem #212121;
+}
+
+.servicio:first-child,
+.servicio:last-child{
+    align-self: flex-start;
+}
+/*Cierra Seccion 2 */
+
+
+/* Seccion 3 */
+
+
+.seccion-3{
+    width: 100%;
+    height: 100%;
+    background-color: #eef;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.seccion-3-encabezado{
+    font-size: 5rem;
+    color: #212121;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    margin-bottom: 15rem;
+    border-bottom: 0.3rem solid #212121;
+    text-shadow: 0.2rem 0.2rem 0.5rem #212121;
+}
+
+.envoltura-proyectos{
+    width: 80%;
+    flex-wrap: wrap;
+}
+
+.proyecto{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    border-radius: 5%;
+    background-color: white;
+    box-shadow: 0.3rem 0.3rem 0.5rem #777;
+    overflow: hidden;
+    transition: box-shadow 0.5s;
+    position: relative;
+}
+
+.proyecto:hover{
+    box-shadow: 1rem 1rem 1rem #777;
+}
+
+
+.empresa-proyecto {
+    opacity: 1;
+    position: absolute;
+    top: 10%; 
+    left: 50%;
+    width: 88%;
+    transform: translate(-50%, -50%); 
+    color: white;
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    text-shadow: 0.2rem 0.2rem 0.5rem #212121;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    border-color: white;
+    box-shadow:0.2rem 0.2rem 0.5rem #212121;
+    background-color: #f0c1f5;
+    padding: 0 1rem;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.proyecto:hover .empresa-proyecto {
+    opacity: 0;
+}
+
+
+
+
+.roll-icono {
+    opacity: 1;
+    position: absolute;
+    bottom: 40%; 
+    left: 50%;
+    margin-bottom: 2rem;
+    box-shadow: 0.4rem 0.4rem 0.5rem #212121;
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+    background: #fbfbfb; 
+    color: #f0c1f5;
+    text-shadow: 0.2rem 0.2rem 0.1rem #060000;
+    padding: 2rem;
+    font-size: 1.8rem;
+    text-align: center;
+    transition: opacity 0.3s ease-in-out;
+
+}
+
+.proyecto:hover .roll-icono {
+    opacity: 0;
+}
+
+
+
+
+
+.roll-proyecto {
+    opacity: 1;
+    position: absolute;
+    bottom: 40%; /* Ajusta según la ubicación deseada */
+    left: 50%;
+    width: 80%;
+    transform: translate(-50%, -50%);
+    background: #f0c1f500; /* Fondo semitransparente */
+    color: rgb(10, 0, 0);
+    text-shadow: 0.2rem 0.2rem 1rem #f2eeee;
+    padding: 1rem;
+    border-radius: 5px;
+    font-size: 2rem;
+    font-weight: 500;
+    text-align: center;
+    transition: opacity 0.3s ease-in-out;
+
+}
+
+.proyecto:hover .roll-proyecto {
+    opacity: 0;
+}
+
+
+
+
+
+
+.texto-proyecto{
+    text-align: center;
+    letter-spacing: 0.1rem;
+    position: absolute;
+    top: -10rem;
+    z-index: 10;
+    transition: top 0.3s;
+}
+
+.proyecto:hover .texto-proyecto{
+   top:5rem;
+   transition: top 0.3s 0.3s; 
+}
+
+.nombre-proyecto{
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 3rem;
+    font-weight: 700;
+    color: #333;
+    text-transform: capitalize;
+}
+
+.tecnologias-proyecto{
+    opacity: 0;
+    font-size: 1.8rem;
+    color: #746112;
+    font-weight: 500;
+    text-shadow: #212121;
+    text-align: left;
+    margin-left: 2rem;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.proyecto:hover .tecnologias-proyecto {
+    opacity: 1;
+}
+
+
+.imagen-proyecto{
+    width: 30rem;
+    height: 50rem;
+    border-radius: 5%;
+    object-fit: cover;
+    border: 0.6rem dashed #f0c1f5;
+    padding: 1rem;
+    background-color: rgba(117, 114, 114, 0.904);
+    opacity: 0.9;
+    transition: opacity 0.3s;
+    box-shadow: 3rem 3rem 2rem rgba(0, 0, 0, 0.4);
+    margin-bottom: 40px; /* Ajusta este valor según la separación deseada */
+    }
+
+.proyecto:hover .imagen-proyecto{
+        opacity: 0.2;
+    }
+
+.link-proyecto{
+        font-size: 2rem;
+        font-weight: 500;
+        color: white;
+        text-shadow: 0.2rem 0.2rem 0.5rem #212121;
+        letter-spacing: 0.1rem;
+        text-transform: uppercase;
+        border-color: white;
+        box-shadow:0.2rem 0.2rem 0.5rem #212121;
+        background-color: #f0c1f5;
+        padding: 0 1rem;
+        position: absolute;
+        bottom: -5rem; 
+        transition: bottom 0.3s;
+        cursor: pointer;
+    
+    
+    
+    
+    
+    
+    
+    }
+
+.proyecto:hover .link-proyecto{
+        bottom: 5rem;
+        transition: bottom 0.3s 0.3s;
+    } 
+
+/* cierra Seccion 3 */
+
+
+/* Seccion 4 */
+
+.seccion-4{
+    width: 100%;
+    height: 70vh;
+    background-color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.seccion-4-encabezado{
+    font-size: 5rem;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 0.3rem solid white;
+    text-shadow: 0.2rem 0.2rem 0.5rem #212121;
+}
+
+.formulario-contacto{
+    width: 50rem;
+    flex-direction: column;
+}
+
+.formulario-contacto input, .formulario-contacto textarea{
+    width: 100%;
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+    background-color: #eef;
+    font-size: 1.5rem;
+    border: 0.2rem solid #f0c1f5; 
+}
+
+.formulario-contacto textarea{
+    height: 10rem;
+    max-height: 15rem;
+    max-width: 100%;
+
+}
+
+.formulario-contacto .formulario-contacto-btn{
+    background-color: #f0c1f5;
+    font-size: 3rem;
+    color: white;
+    text-shadow: 0.2rem 0.2rem 0.5rem #212121;
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-color: white;
+}
+
+/* Cierra Seccion 4 */
+
+/* Footer */
+.seccion-5{
+    width: 100%;
+    height: 30vh;
+    background-color: #222;
+    flex-direction: column;
+}
+
+
+/* boton descarga */
+.user-info__buttons{
+    font-size: 2rem;
+    margin-top: 2rem;
+    margin-bottom: 4rem;
+}
+
+.user-info__btn{
+    padding: 3rem;
+    padding-top: 1.3rem;
+    padding-bottom: 1.3rem;
+    border: 2px solid white;
+    border-radius: 3.2rem;
+    color: #f0c1f5;
+    box-shadow: 0 10px 10px -8px rgba(0, 0, 0, 0.25); /*0 despazamiento horizontal, 10px desplazamiento vertical, 10px desenfoque o difuminado de la sombra, -8 la expancion de la sombra*/
+    transition: all 300ms ease-in-out;
+}
+
+.user-info__btn:hover{
+    background-color: #f0c1f5;
+    color: black;
+}
+
+
+
+/* links sociales */
+.social-media{
+    margin-bottom: 5rem;
+}
+
+.social-media-link{
+    margin: 0 2rem;
+    padding: 0.7rem;
+    background-color: #f0c1f5;
+    border-radius: 0.5rem;
+    display: inline-block;
+}
+
+.social-media-link i{
+    font-size: 4rem;
+    color: white;
+    text-shadow: 0.2rem 0.2rem 0.5rem #212121;
+    
+}
+
+.copyright{
+    color: #aaa;
+    font-size: 2rem;
+    letter-spacing: 0.2rem;
+    font-weight: 300;
+    text-align: center;
+}
+
+/* Cierra Footer */
+
+/* Responsive */
+@media (max-width: 1200px){
+
+    .seccion-1{
+        height: 120vh;
+    }
+
+    .seccion-1 img.giff{
+        width: 20rem;
+        height: 20rem;
+        position: absolute;
+        bottom: 70px; /* Ajusta la distancia desde el borde inferior */
+        right: 290px;  /* Ajusta la distancia desde el borde derecho */
+        z-index: 1; /* Asegura que el GIF esté delante de la imagen */
+        
+    }
+
+    .servicios{
+        height: auto; 
+        flex-wrap: wrap;
+    }
+
+    .servicio{
+       margin: 3rem 2rem; 
+    }
+
+    .seccion-4{
+        height: 80vh;
+    }
+}
+
+@media (max-width: 800px){
+
+    .seccion-1{
+        height: 110vh;
+    }
+
+    .seccion-1-encabezado{
+        font-size: 4rem;
+    }
+
+    .seccion-1 img.giff{
+        width: 20rem;
+        height: 20rem;
+        position: absolute;
+        bottom: 90px; /* Ajusta la distancia desde el borde inferior */
+        right: 150px;  /* Ajusta la distancia desde el borde derecho */
+        z-index: 1; /* Asegura que el GIF esté delante de la imagen */
+        
+    }
+
+
+    .seccion-2-encabezado{
+        font-size: 4rem;
+        margin-bottom: 10rem;
+    }
+
+    .barra-progreso{
+        width: 50rem;
+    }
+
+    .seccion-3-encabezado{
+        font-size: 4rem;
+    }
+
+    .seccion-4-encabezado{
+        font-size: 4rem;
+    }
+
+}
+
+@media (max-width: 600px){
+
+    .seccion-1-encabezado{
+        font-size: 2.8rem;
+    }
+
+    .seccion-1 img.giff{
+        width: 20rem;
+        height: 20rem;
+        position: absolute;
+        bottom: 90px; /* Ajusta la distancia desde el borde inferior */
+        right: 70px;  /* Ajusta la distancia desde el borde derecho */
+        z-index: 1; /* Asegura que el GIF esté delante de la imagen */
+        
+    }
+
+
+    .navbar-link{
+        margin: 0 2rem;
+        font-size: 1.5rem;
+    }
+
+    .nombre-persona{
+        font-size: 4rem;
+    }
+
+    .barra-progreso{
+        width: 45rem;
+    }
+
+    .seccion-3-encabezado{
+        font-size: 4rem;
+    }
+
+    .formulario-contacto{
+        width: 70%;
+    }
+
+    .copyright{
+        width: 70%;
+    }
+}
+
+@media(max-width: 500px){
+
+    html{
+        font-size: 55%;
+    }
+
+    .seccion-1{
+        height: 100vh;
+    }
+
+    .seccion-1-encabezado{
+        font-size: 2.3rem;
+    }
+
+    .seccion-1 img.giff{
+        width: 20rem;
+        height: 20rem;
+        position: absolute;
+        bottom: 160px; /* Ajusta la distancia desde el borde inferior */
+        right: 50px;  /* Ajusta la distancia desde el borde derecho */
+        z-index: 1; /* Asegura que el GIF esté delante de la imagen */
+        
+    }
+
+
+    .nombre-persona{
+        font-size: 4rem;
+    }
+
+
+    .navbar-link{
+        margin: 0 1rem;
+        font-size: 1.5rem;
+    }
+    
+        
+    
+    .barra-progreso{
+        width: 35rem;
+    }
+    
+
+    .seccion-3-encabezado{
+        font-size: 4rem;
+    }
+    
+
+    .formulario-contacto{
+        width: 65%;
+    }
+    
+    
+    .copyright{
+        width: 60%;
+    }
+    
+}
+
+
+@media(max-width: 450px){
+
+    html{
+        font-size: 50%;
+    }
+
+    .seccion-1{
+        height: 90vh;
+    }
+
+
+    .seccion-1-encabezado{
+        font-size: 2.2rem;
+    }
+
+    .seccion-1 img.giff{
+        width: 20rem;
+        height: 20rem;
+        position: absolute;
+        bottom: 240px; /* Ajusta la distancia desde el borde inferior */
+        right: 40px;  /* Ajusta la distancia desde el borde derecho */
+        z-index: 1; /* Asegura que el GIF esté delante de la imagen */
+        
+    }
+
+
+    .nombre-persona{
+        font-size: 4rem;
+    }
+
+
+    .navbar-link{
+        margin: 0 1.5rem;
+        font-size: 1.5rem;
+    }
+    
+        
+    
+    .barra-progreso{
+        width: 40rem;
+    }
+    
+
+    .seccion-3-encabezado{
+        font-size: 4rem;
+    }
+    
+
+    .formulario-contacto{
+        width: 70%;
+    }
+    
+    
+    .copyright{
+        width: 60%;
+    }
+    
+}
+
+
+
+/* Cierra Responsive */
